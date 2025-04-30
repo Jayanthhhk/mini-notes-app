@@ -9,7 +9,8 @@ const NoteForm = ({ onAddNote }) => {
     e.preventDefault();
     try {
       const newNote = { title, content };
-      const response = await axios.post('http://localhost:5050/notes', newNote);
+      const response = await axios.post('https://mini-notes-server.onrender.com/notes', newNote);
+
       onAddNote(response.data);
       setTitle('');
       setContent('');
