@@ -1,0 +1,139 @@
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #f7fafc;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  color: #2d3748;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+header h2 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #4a5568;
+}
+
+.add-note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 1rem;
+  color: #4a5568;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-field::placeholder {
+  color: #cbd5e0;
+}
+
+.input-field:focus {
+  border-color: #3182ce;
+}
+
+.submit-btn {
+  background-color: #3182ce;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #2b6cb0;
+}
+
+.notes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.note-item {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.note-item h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #2d3748;
+}
+
+.note-item p {
+  font-size: 1rem;
+  color: #4a5568;
+  margin: 0;
+}
+
+.note-index {
+  font-size: 0.9rem;
+  color: #a0aec0;
+}
+
+.delete-btn {
+  margin-top: 10px;
+  background-color: #e53e3e;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #c53030;
+}
+
+.loading,
+.no-notes {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #4a5568;
+}
