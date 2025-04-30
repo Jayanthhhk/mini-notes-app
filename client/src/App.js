@@ -8,9 +8,11 @@ function App() {
   const [content, setContent] = useState('');
   const [loading, setLoading] = useState(true);
 
+  const API_URL = 'https://mini-notes-app.onrender.com/notes';
+
   // Fetch notes
   useEffect(() => {
-    axios.get('http://localhost:5050/notes')
+    axios.get(API_URL)
       .then(res => {
         setNotes(res.data);
         setLoading(false);
@@ -28,7 +30,7 @@ function App() {
       return alert('Both title and content are required!');
     }
 
-    axios.post('http://localhost:5050/notes', { title, content })
+    axios.post(API_URL, { title, content })
       .then(res => {
         setNotes([res.data, ...notes]);
         setTitle('');
@@ -39,7 +41,7 @@ function App() {
 
   // Delete note
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:5050/notes/${id}`)
+    axios.delete(`${API_URL}/${id}`)
       .then(() => {
         setNotes(notes.filter(note => note._id !== id));
       })
